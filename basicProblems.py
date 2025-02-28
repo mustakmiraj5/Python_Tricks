@@ -32,6 +32,17 @@ class MainClass:
                 return "Fourth Quadrant"
             else:
                 return "Origin"
+            
+    # Circle
+    class Circle:
+        def __init__(self, radius):
+            self.radius = radius
+
+        def area(self):
+            return 3.14 * self.radius * self.radius
+
+        def perimeter(self):
+            return 2 * 3.14 * self.radius
 
 
 if __name__ == "__main__":
@@ -49,3 +60,6 @@ if __name__ == "__main__":
     print(result)
     # Determine quadrant
     print("Quadrant: "+MainClass.Quadrant(-3, 4).determine())
+    # Circle
+    print("Circle Area: "+str(MainClass.Circle(5).area()))
+    print("Circle Perimeter: "+str(MainClass.Circle(5).perimeter()))
