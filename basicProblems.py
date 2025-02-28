@@ -14,6 +14,25 @@ class MainClass:
 
         def subtract(self):
             return self.num1 - self.num2
+    
+    # Determine quadrant of of a point
+    class Quadrant:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+
+        def determine(self):
+            if self.x > 0 and self.y > 0:
+                return "First Quadrant"
+            elif self.x < 0 and self.y > 0:
+                return "Second Quadrant"
+            elif self.x < 0 and self.y < 0:
+                return "Third Quadrant"
+            elif self.x > 0 and self.y < 0:
+                return "Fourth Quadrant"
+            else:
+                return "Origin"
+
 
 if __name__ == "__main__":
     # Example usage off add 2 numbers
@@ -25,3 +44,8 @@ if __name__ == "__main__":
     subtraction = MainClass.SubtractNumbers(10, 3)
     result = subtraction.subtract()
     print(f"The difference between 10 and 3 is: {result}")
+
+    result = MainClass.AddNumbers(11,23).add()
+    print(result)
+    # Determine quadrant
+    print("Quadrant: "+MainClass.Quadrant(-3, 4).determine())
