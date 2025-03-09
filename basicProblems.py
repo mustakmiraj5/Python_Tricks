@@ -43,6 +43,18 @@ class MainClass:
 
         def perimeter(self):
             return 2 * 3.14 * self.radius
+        
+    # Rectangle
+    class Rectangle:
+        def __init__(self, length, width):
+            self.length = length
+            self.width = width
+
+        def area(self):
+            return self.length * self.width
+
+        def perimeter(self):
+            return 2 * (self.length + self.width)
 
 
 if __name__ == "__main__":
@@ -63,3 +75,6 @@ if __name__ == "__main__":
     # Circle
     print("Circle Area: "+str(MainClass.Circle(5).area()))
     print("Circle Perimeter: "+str(MainClass.Circle(5).perimeter()))
+    # Rectangle
+    print("Rectangle Area: "+str(MainClass.Rectangle(5, 10).area()))
+    print("Rectangle Perimeter: "+str(MainClass.Rectangle(5, 10).perimeter()))
